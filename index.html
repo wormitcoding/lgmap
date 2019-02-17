@@ -1,94 +1,24 @@
 <html>
-<style>
-#zombie_map {
-    height: 100%;
-    width: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;  
-    background-color: grey;
-}
-</style>  
 
 <head>
-    <title>M.A.D. about litter</title>
+    	<title>M.A.D. about litter</title>
+	<link rel="stylesheet" href="style.css">
 </head>
   
 <body>
-    M.A.D. about litter
-<div id="zombie_map">
-<script>
-    var zombie_map;
-    var old_position;
-    var all_markers=[];
- var data = `56.425789 -2.977969 recycling2.png
-	56.432117 -2.953307 recycling2.png
-	56.439682 -2.941058 recycling2.png
-	56.42928199060562 -2.965879440307617 thumbsdown2.png`;
-    var markers = data.split("\n");
+<div>
+   	<h1>Welcome to M.A.D. about Litter</h1>
 
-    function initMap() {
+	<p span class="info2">Welcome to our M.A.D. (Make A Difference) about litter app.  There is lots here to show you that you can make a difference.</p>
 
-    	zombie_map = new google.maps.Map(document.getElementById('zombie_map'), {
-        	zoom: 14,
-        	center: {lat: 56.4293, lng: -2.9659}
-		});
+	<button class="button2" type="button" onclick="window.location.href = 'map2.html';">View your local litter map</button> <br /><br />
+	<button class="button2" type="button">Safety Guide</button> <br /><br />
+	<button class="button2" type="button">Ideas for litter reuse</button> <br /><br />
+	<button class="button2" type="button">View your profile</button> <br /><br />
+	<button class="button2" type="button">Leader Board</button> <br /><br />
 
-	var old_position = new google.maps.Marker({
-  			position: {lat: 56.4293, lng: -2.9659},
- 			map: zombie_map,
-			icon: "player.png"
-			}); 
-    	
-    	for(var i=0; i < markers.length; i++) {
-		
-		var marker_data = markers[i].trim();
-		marker_data = marker_data.split(" ");
-
-		var latitude = marker_data[0];
-		var longitude = marker_data[1];
-		var emoji = marker_data[2];
-		var marker_position = new google.maps.LatLng(latitude, longitude);
-		
-		var marker = new google.maps.Marker({
-  			position: marker_position,
- 			map: zombie_map,
-			icon: emoji
-			}); 
-		
-		all_markers.push(marker);
-
-    		}
-
-	if(navigator.geolocation) {
-    		navigator.geolocation.watchPosition(set_my_position);
-		}
-	else {
-    		alert("Geolocation doesn't work in your browser");
-		}
-
-}
-
-function set_my_position(position){
-  
-  old_position.setMap(null);
-
-  var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-  var marker = new google.maps.Marker({
-  		position: pos,
- 			map: zombie_map,
-			icon: "player.png"
-			}); 
-  old_position = marker;
-}
-</script>
+	<p>This app was developed by Bethan, Elsa, Jack, Lily and Tara from Wormit Code Club.</p>
 </div>
-
-<script async defer
-   
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwS_UKuAMPZKUAGu_CLaqo5dJSVborNK4&callback=initMap">
- 
-</script>
-  </body>
+	
+</body>
 </html>
