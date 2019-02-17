@@ -11,22 +11,20 @@
 </style>  
 
 <head>
-    <title>My page title</title>
+    <title>M.A.D. about litter</title>
 </head>
   
 <body>
-    My zombie map
+    M.A.D. about litter
 <div id="zombie_map">
 <script>
     var zombie_map;
+    var old_position;
     var all_markers=[];
-    var data = `56.431654988315614 -2.9528331756591797 medic.png 
-	56.42928199060562 -2.965879440307617 medic.png 
-	56.431465153948736 -2.9630041122436523 weapons.png
- 	56.42731229003275 -2.9679393768310547 weapons.png 
-	56.42875991123473 -2.97029972076416 zombie.png 
-	56.43032612784351 -2.959270477294922 zombie.png
- 	56.43390919896811 -2.9536056518554688 zombie.png`;
+ var data = `56.425789 -2.977969 recycling2.png
+	56.432117 -2.953307 recycling2.png
+	56.439682 -2.941058 recycling2.png
+	56.42928199060562 -2.965879440307617 thumbsdown2.png`;
     var markers = data.split("\n");
 
     function initMap() {
@@ -35,6 +33,12 @@
         	zoom: 14,
         	center: {lat: 56.4293, lng: -2.9659}
 		});
+
+	var old_position = new google.maps.Marker({
+  			position: {lat: 56.4293, lng: -2.9659},
+ 			map: zombie_map,
+			icon: "player.png"
+			}); 
     	
     	for(var i=0; i < markers.length; i++) {
 		
@@ -66,6 +70,9 @@
 }
 
 function set_my_position(position){
+  
+  old_position.setMap(null);
+
   var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
   var marker = new google.maps.Marker({
@@ -73,7 +80,7 @@ function set_my_position(position){
  			map: zombie_map,
 			icon: "player.png"
 			}); 
-  
+  old_position = marker;
 }
 </script>
 </div>
