@@ -1,0 +1,76 @@
+body {
+  
+	background-color: teal;
+	
+	padding: 30px;
+	
+	max-width: 350px;
+	
+	margin: auto;
+
+}
+
+
+
+h1 {
+	color:white;
+	font-family: Verdana;
+	
+	font-weight: 900;
+	
+	text-transform: uppercase; 
+}
+
+p {
+	color:white;
+	font-family: Verdana;
+
+}
+
+
+
+
+.info {
+	
+	background-color: antiquewhite;
+	
+	font-family: "Times New Roman", Times, serif;
+	
+	font-weight: bold;
+
+}
+
+
+
+.info2  {
+  
+	color:white;
+  
+	font-family: Verdana;
+	
+	font-weight: 900;
+	
+}
+
+
+
+
+
+
+.button2  {
+  
+	background-color: antiquewhite;
+				
+	color:teal;
+  
+	font-family: Verdana;
+	
+	font-weight: 900;
+	
+}
+
+
+
+div {
+	text-align:center;
+}
