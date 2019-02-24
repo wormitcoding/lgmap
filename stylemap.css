@@ -1,0 +1,84 @@
+body {
+  
+	background-color: teal;
+	
+}
+
+
+
+h1 {
+	color:white;
+	font-family: Verdana;
+	
+	font-weight: 900;
+	
+	text-transform: uppercase; 
+}
+
+p {
+	color:white;
+	font-size: 28px;
+	font-family: Verdana;
+
+}
+
+.footer {
+	font-size: 0.8em;
+}
+
+
+.info {
+	
+	background-color: antiquewhite;
+	
+	font-family: "Times New Roman", Times, serif;
+	
+	font-weight: bold;
+
+}
+
+
+
+.info2  {
+  
+	color:white;
+  
+	font-family: Verdana;
+
+	font-size: 1.25em;	
+	font-weight: 900;
+	
+}
+
+
+
+
+
+
+.button2  {
+  
+	background-color: antiquewhite;
+				
+	color:teal;
+  
+	font-family: Verdana;
+	
+	font-weight: 900;
+
+	font-size: 48px;
+	border-radius: 12px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;	
+}
+
+
+
+.button2:hover {
+  	background-color: yellow; 
+	color: teal;
+	
+}
+
+div {
+	text-align:center;
+}
