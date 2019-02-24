@@ -55,6 +55,17 @@ p {
 
 
 
+.option  {
+  
+	font-family: Verdana;
+
+	font-size: 36px;	
+	font-weight: 900;
+	
+}
+
+
+
 .button2  {
   
 	background-color: antiquewhite;
