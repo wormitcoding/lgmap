@@ -79,6 +79,24 @@ p {
 	
 }
 
+.button2  {
+  
+	background-color: antiquewhite;
+				
+	color:teal;
+  
+	font-family: Verdana;
+	
+	font-weight: 900;
+
+	font-size: 26px;
+	border-radius: 12px;
+	-webkit-transition-duration: 0.4s; /* Safari */
+  	transition-duration: 0.4s;	
+}
+
+
+
 div {
 	text-align:center;
 }
